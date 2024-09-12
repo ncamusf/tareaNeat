@@ -1,0 +1,27 @@
+<h2>Historial</h2> 
+<table class="table custom-table">
+    <thead class="thead-light">
+        <tr>
+            <th>Fecha</th>
+            <th>Tipo de Transacción</th>
+            <th>Moneda</th>
+            <th>Cantidad</th>
+            <th>Precio por Unidad (USD)</th>
+            <th>Monto Total (USD)</th>
+            <th>Estado de la Transacción</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for (transaction of transactions; track $index) {
+            <tr>
+                <td>{{transaction.date}}</td>
+                <td>{{transaction.transactionType}}</td>
+                <td class="font-weight-bold">{{transaction.cryptocurrency}}</td>
+                <td class="text-dark">{{transaction.quantity}}</td>
+                <td class="text-primary">{{transaction.pricePerUnitUSD}} USD</td>
+                <td class="text-primary">{{transaction.totalAmountUSD}} USD</td>
+                <td>{{transaction.transactionStatus}}</td>
+            </tr>
+        }
+    </tbody>
+</table>
