@@ -1,6 +1,4 @@
 import { Injectable } from '@angular/core';
-import { Transaction } from '../models/transaction';
-import { transactions } from '../data/transactions.data';
 import { userInfo } from '../data/userInfo.data';
 import { UserInfo } from '../models/userInfo';
 

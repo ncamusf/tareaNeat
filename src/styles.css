@@ -1,86 +1,20 @@
-
-/* Ajusta el formato de las tarjetas de criptomonedas */
-.crypto-card-format {
-    width: 170px;
-    height: 150px;
-    padding: 20px;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 30px;
-    border-radius: 12px;
-    border: 2px solid #DBE9FC;
-    background: #FFF;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    flex-shrink: 0;
-}
-
-/* Logo de criptomonedas dentro de la tarjeta */
-.crypto-icon-tag {
-    display: flex;
-    align-items: center;
-    gap: 8px; /* Espacio entre el logo y el tag */
-}
-
-/* Estilo del nombre de la criptomoneda */
-.crypto-code {
-    font-size: 1.25rem;
-    font-weight: bold;
-    color: #1E3A8A;
-}
-
-/* Estilo del nombre completo de la criptomoneda */
-.crypto-name {
-    font-size: 1.1rem;
-    font-weight: bold;
-    color: #9D9FC2;
-    margin-bottom: 15px;
-}
-
-/* Estilo del precio de la criptomoneda */
-.crypto-price {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #2E3B8A;
-}
-
-.balance-resume-container {
-    border: 1px solid #D3D3D3;
-    border-radius: 10px;
+.perfil-space{
     padding: 15px;
+    margin-left: 100px;
     margin-bottom: 15px;
-  }
-  
-.balance-resume-entry {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 12px;
-    border-radius: 8px;
-    border: 1px solid rgba(183, 211, 249, 0.50);
-    background: #FCFDFF;
-    margin-bottom: 15px;    
 }
 
-.balance-resume-entry:last-child {
-border-bottom: none;
+.crypto-balance-space{
+    padding: 15px;
+    margin-left: 200px;
+    margin-bottom: 15px;
 }
 
-.balance-resume-title {
-font-weight: bold;
-color: #303073;
+.crypto-price-space{
+    padding: 15px;
+    margin-left: 185px;
+    margin-bottom: 15px;
 }
-
-.balance-resume-quantity {
-font-weight: bold;
-color: #303073;
-}
-
-.balance-resume-price {
-font-weight: bold;
-color: #1A6BFF;
-}
-
-.balance-resume-currency {
-color: #A0A0B0;
-font-size: 0.9em;
+.subTitle{
+    color: #2E3B8A;
 }

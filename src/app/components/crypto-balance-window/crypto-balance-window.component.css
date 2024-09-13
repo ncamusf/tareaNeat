@@ -1,0 +1,30 @@
+.balance-resume-entry {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid rgba(183, 211, 249, 0.50);
+    background: #FCFDFF;
+    margin-bottom: 15px;    
+}
+
+.balance-resume-title {
+font-weight: bold;
+color: #303073;
+}
+
+.balance-resume-quantity {
+font-weight: bold;
+color: #303073;
+}
+
+.balance-resume-price { 
+font-weight: bold;
+color: #1A6BFF;
+}
+
+.balance-resume-currency {
+    color: #A0A0B0;
+    font-size: 0.9em;
+}

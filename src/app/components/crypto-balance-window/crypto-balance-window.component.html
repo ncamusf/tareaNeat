@@ -1,0 +1,13 @@
+
+  <h4 class="mx-2 subTitle">Tus Crypto Saldo</h4>
+  <hr class="my-2 mx-1 subTitle">
+  <div class="my-4">
+
+    @for (accountBalanceCrypto of userInfo.accountBalanceCrypto; track $index) {
+      <div class="mx-2 balance-resume-entry">
+        <span class="balance-resume-title">{{ accountBalanceCrypto.currencyName }}</span>
+        <span class="balance-resume-quantity">{{ accountBalanceCrypto.totalAmount }}</span>
+        <span class="balance-resume-price">{{ getCurrencyBalanceInUSD(accountBalanceCrypto) }} <span class="balance-resume-currency">USD</span></span>
+      </div>
+    }
+  </div>

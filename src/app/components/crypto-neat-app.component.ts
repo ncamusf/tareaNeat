@@ -6,11 +6,16 @@ import { UserInfo } from '../models/userInfo';
 import { UserService } from '../services/user.service';
 import { interval } from 'rxjs';
 import { CurrencyBalance } from '../models/currencyBalance';
+import { CryptoCardComponent } from "./crypto-card/crypto-card.component";
+import { CryptoPriceWindowComponent } from "./crypto-price-window/crypto-price-window.component";
+import { CryptoBalanceWindowComponent } from "./crypto-balance-window/crypto-balance-window.component";
+import { PerfilWindowComponent } from "./perfil-window/perfil-window.component";
+import { NavBarComponent } from "./nav-bar/nav-bar.component";
 
 @Component({
   selector: 'crypto-neat-app',
   standalone: true,
-  imports: [],
+  imports: [CryptoCardComponent, CryptoPriceWindowComponent, CryptoBalanceWindowComponent, PerfilWindowComponent, NavBarComponent],
   templateUrl: './crypto-neat-app.component.html',
 })
 export class CryptoNeatAppComponent implements OnInit{
@@ -18,7 +23,6 @@ export class CryptoNeatAppComponent implements OnInit{
     cryptosInfo!: CryptoInfo[];
     transactions!: Transaction[];
     userInfo!: UserInfo;
-    cryptoInfo!: CryptoInfo [];
   
     constructor(private cryptoService: CryptoService,private userService: UserService) { }
     ngOnInit(): void {
@@ -30,10 +34,6 @@ export class CryptoNeatAppComponent implements OnInit{
         this.cryptosInfo = this.cryptoService.callCryptoAPI();
       })
 
-    }
-
-    getCurrencyBalanceInUSD(currencyBalance:CurrencyBalance): String{
-      return ((this.cryptosInfo.find(info => info.name === currencyBalance.currencyName)?.priceUSD || 0) * currencyBalance.totalAmount).toFixed(2);
     }
 
 }
