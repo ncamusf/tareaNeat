@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { Transaction } from '../../models/transaction';
 
 @Component({
-  selector: 'app-transactions-view',
+  selector: 'transactions-view',
   standalone: true,
   imports: [],
   templateUrl: './transactions-view.component.html'
