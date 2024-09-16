@@ -1,6 +1,6 @@
 <div class="sidebar">
     <div class="sidebar-header text-center">
-        <img src="assets\logoNeat.png" alt="Logo" class="logo">
+        <img src="assets\icons\logoNeat.png" alt="Logo" class="logo">
         <h4>CryptoNeat</h4>
     </div>
     <ul class="nav flex-column">
@@ -28,6 +28,11 @@
             <a href="#" class="nav-link">
                 <img src="path-to-profile-image" alt="Profile" class="profile-pic"> Mi perfil
             </a>
+        </li>
+        <li class="nav-item">
+            <button (click)="logout()" class="btn btn-primary mt-1 mb-3">
+                <i class="fas fa-sign-out-alt"></i> Cerrar sesión
+            </button>
         </li>
     </ul>
 </div>

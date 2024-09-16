@@ -5,7 +5,6 @@ import { Transaction } from '../models/transaction';
 import { UserInfo } from '../models/userInfo';
 import { UserService } from '../services/user.service';
 import { interval } from 'rxjs';
-import { CurrencyBalance } from '../models/currencyBalance';
 import { CryptoCardComponent } from "./crypto-card/crypto-card.component";
 import { CryptoPriceWindowComponent } from "./crypto-price-window/crypto-price-window.component";
 import { CryptoBalanceWindowComponent } from "./crypto-balance-window/crypto-balance-window.component";

@@ -1,7 +1,7 @@
 .sidebar {
     width: 150px;
     height: 100vh;
-    background: linear-gradient(90deg, #1A6BFF, #8fb6ff);
+    background: linear-gradient(90deg, #1A6BFF 90%, #8fb6ff );
     color: white;
     display: flex;
     flex-direction: column;
@@ -32,9 +32,9 @@
 }
 
 .profile-item {
-    margin-top: auto; 
-    margin-bottom: 30px;
+    margin-top: auto;
 }
+
 .sidebar .nav-link {
     color: white;
     padding: 10px 20px;
