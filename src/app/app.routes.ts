@@ -5,6 +5,7 @@ import { CryptoNeatAppComponent } from '@components/crypto-neat-app.component';
 import { authGuard } from './auth.guard';
 import { TransactionsPageComponent } from '@components/transactions-page/transactions-page.component';
 import { HomePageComponent } from '@components/home-page/home-page.component';
+import { HistorialPageComponent } from '@components/historial-page/historial-page.component';
 
 export const routes: Routes = [
     {path: '', redirectTo:'login', pathMatch: 'full'},
@@ -16,6 +17,7 @@ export const routes: Routes = [
         canActivate: [authGuard],
         children: [
             {path: 'home', component: HomePageComponent},
+            {path: 'history', component: HistorialPageComponent},
             {path: 'transactions-page', component:TransactionsPageComponent}
         ]
     }

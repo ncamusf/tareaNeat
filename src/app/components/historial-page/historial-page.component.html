@@ -1,1 +1,28 @@
-<p>historial-page works!</p>
+<div class="crypto-balance-space">
+<h2>Historial de Transacciones</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Fecha</th>
+      <th>Tipo de Transacción</th>
+      <th>Criptomoneda</th>
+      <th>Cantidad</th>
+      <th>Precio por Unidad (USD)</th>
+      <th>Monto Total (USD)</th>
+      <th>Estado</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let transaction of userInfo?.transactions">
+      <td>{{ getDate(transaction.date)}}</td>
+      <td>{{ transaction.transactionType }}</td>
+      <td>{{ transaction.cryptocurrency }}</td>
+      <td>{{ transaction.quantity }}</td>
+      <td>{{ transaction.pricePerUnitUSD | currency:'USD' }}</td>
+      <td>{{ transaction.totalAmountUSD | currency:'USD' }}</td>
+      <td>{{ transaction.transactionStatus }}</td>
+    </tr>
+  </tbody>
+</table>
+</div>

@@ -9,6 +9,15 @@
     margin-bottom: 15px;    
 }
 
+.balance-resume-entry-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    background: #FCFDFF;
+    margin-bottom: 15px;    
+}
+
 .balance-resume-title {
 font-weight: bold;
 color: #303073;
