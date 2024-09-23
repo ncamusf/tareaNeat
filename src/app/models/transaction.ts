@@ -1,5 +1,6 @@
 export class Transaction {
-    date: string = '';
+    uid: string = '';
+    date: Date = new Date();
     transactionType: string = '';
     cryptocurrency: string = '';
     quantity: number = 0;

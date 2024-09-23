@@ -1,0 +1,135 @@
+.container {
+  width: 400px;
+  margin: 50px auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  border: 2px solid #DBE9FC;
+  background: #FFF;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  flex-shrink: 0;
+}
+
+.custom-form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px; /* Espacio entre los elementos del formulario */
+}
+
+.radio-group {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.radio-label {
+  font-size: 14px;
+  font-weight: normal;
+  color: #6b7280;
+}
+
+label {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #6b7280;
+}
+
+input.form-control, select.form-control {
+  width: 100%;
+  padding: 12px;
+  font-size: 14px;
+  border: 1px solid #d1d5db; /* Borde gris claro */
+  border-radius: 8px;
+  background-color: #f9fafb;
+  transition: border-color 0.3s ease;
+}
+
+/* Estilo para el campo habilitado */
+input.form-control.enabled, select.form-control.enabled {
+  color: #374151;
+  border-color: #d1d5db;
+}
+
+/* Estilo para el campo deshabilitado */
+input.form-control:disabled, select.form-control:disabled {
+  background-color: #f3f4f6; /* Fondo gris claro */
+  color: #9ca3af; /* Texto gris */
+  border: 1px solid #d1d5db;
+}
+
+/* Estilo para el campo con error */
+input.form-control.error, select.form-control.error {
+  border-color: red;
+  color: red;
+}
+
+.form-text {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.form-text.text-muted {
+  color: #9ca3af;
+}
+
+/* Hover */
+input.form-control:hover, select.form-control:hover {
+  border-color: #1f2937; /* Borde más oscuro */
+}
+
+/* Focus */
+input.form-control:focus, select.form-control:focus {
+  outline: none;
+  border-color: #3369F0; /* Azul intenso en focus */
+  box-shadow: 0 0 5px rgba(51, 105, 240, 0.5);
+}
+
+button.custom-btn {
+  display: inline-flex;
+  height: 48px;
+  padding: 12px 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+  border-radius: 24px;
+  background-color: #3369F0;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  transition: all 0.2s ease-in-out;
+}
+
+button.custom-btn span {
+  margin-left: 10px;
+  transition: margin-left 0.2s ease-in-out;
+}
+
+button.custom-btn:hover {
+  background-color: #0056b3;
+}
+
+button.custom-btn:hover span {
+  margin-left: 15px;
+}
+
+button.custom-btn:focus {
+  box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5);
+}
+
+button.custom-btn:active {
+  background-color: #004080;
+  box-shadow: none;
+}
+
+/* Estilos para la información del saldo */
+.balance-info {
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+.balance-info p {
+  margin: 0;
+  font-weight: bold;
+}

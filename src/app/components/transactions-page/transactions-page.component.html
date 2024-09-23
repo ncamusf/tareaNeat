@@ -1,0 +1,43 @@
+<div class="container mt-5">
+    <h2 class="subTitle">Compra/Venta de Criptomonedas</h2>
+  
+    <!-- Mostrar el saldo del usuario -->
+    <div class="balance-info" *ngIf="userInfo">
+      <p>Saldo en USD: {{ userInfo.accountBalanceUSD | currency:'USD' }}</p>
+      <p *ngIf="transactionForm.value.transactionType === 'Venta'">
+        Saldo de {{ transactionForm.value.cryptoType }}: {{ getCryptoBalance(transactionForm.value.cryptoType) }}
+      </p>
+    </div>
+  
+    <form [formGroup]="transactionForm" id="cryptoForm" class="custom-form">
+      <label>Tipo de transacción:</label>
+      <div class="radio-group">
+        <label class="radio-label">
+          <input type="radio" formControlName="transactionType" value="Compra"> Compra
+        </label>
+        <label class="radio-label">
+          <input type="radio" formControlName="transactionType" value="Venta"> Venta
+        </label>
+      </div>
+  
+      <label>Tipo de criptomoneda:</label>
+      <select id="cryptoType" formControlName="cryptoType" class="form-control">
+        <option *ngFor="let crypto of cryptosInfo" [value]="crypto.tag">{{crypto.name}} ({{crypto.tag}})</option>
+      </select>
+  
+      <label>
+        Monto en {{ transactionForm.value.transactionType === 'Compra' ? 'USD' : transactionForm.value.cryptoType }}:
+      </label>
+      <input type="number" formControlName="amount" id="amount" class="form-control" min="1" step="1" required>
+  
+      <label *ngIf="transactionForm.get('cryptoType')?.value">
+        = 
+        <span>{{ transactionForm.value.transactionType === 'Compra' ? amountInCrypto : amountInUSD}}</span>
+        {{ transactionForm.value.transactionType === 'Compra' ? transactionForm.value.cryptoType : 'USD' }}
+      </label>
+  
+      <button type="button" class="btn btn-primary custom-btn" (click)="makeNewTransaction()">Realizar transacción <span>&rarr;</span></button>
+    </form>
+  
+    <div class="result" id="result"></div>
+  </div>

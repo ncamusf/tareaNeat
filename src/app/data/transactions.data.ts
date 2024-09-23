@@ -2,7 +2,8 @@ import { Transaction } from "../models/transaction";
 
 export const transactions:Transaction[] = [
     {
-      "date": "2024-09-12 15:30",
+      "uid":"1",
+      "date": new Date(),
       "transactionType": "Compra",
       "cryptocurrency": "Bitcoin (BTC)",
       "quantity": 0.005,
@@ -11,7 +12,8 @@ export const transactions:Transaction[] = [
       "transactionStatus": "Completada"
     },
     {
-      "date": "2024-09-12 14:00",
+      "uid":"1",
+      "date": new Date(),
       "transactionType": "Venta",
       "cryptocurrency": "Ethereum (ETH)",
       "quantity": 0.1,
@@ -20,7 +22,8 @@ export const transactions:Transaction[] = [
       "transactionStatus": "Rechazada"
     },
     {
-      "date": "2024-09-11 13:20",
+      "uid":"1",
+      "date": new Date(),
       "transactionType": "Compra",
       "cryptocurrency": "Litecoin (LTC)",
       "quantity": 2.0,

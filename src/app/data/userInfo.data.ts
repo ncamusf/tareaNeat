@@ -7,6 +7,6 @@ export const userInfo : UserInfo = {
     name: 'Nicolas',
     lastName: 'Camus',
     accountBalanceCrypto: currencyBalance,
-    accountBalanceUSD: 0,
+    accountBalanceUSD: 10000,
     transactions: transactions,
 }

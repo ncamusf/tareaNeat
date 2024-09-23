@@ -1,11 +1,4 @@
 <div class="row">
   <nav-bar/>
-  <div class="container-fluid">
-      <div class="row my-1">
-        <crypto-balance-window class="crypto-balance-space col-md-4" [userInfo]="userInfo" [cryptosInfo]="cryptosInfo"/>
-        <perfil-window class="perfil-space col-md-4 text-right" [userInfo]="userInfo"/>
-      </div>
-      <crypto-price-window class="crypto-price-space row my-1"[cryptosInfo]="cryptosInfo"/>
-
-  </div>
+  <router-outlet/>
 </div>

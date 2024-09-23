@@ -1,0 +1,32 @@
+<div class="abrir-modal animacion fadeIn">
+    <div class="modal" style="display: block;" tabindex="-1">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="subTitle">Confirmar Transacción</h5>
+                </div>
+                <div class="modal-body">
+                    <div>
+                        <p>¿Estás seguro de que deseas realizar la siguiente transacción?</p>
+                        <ul>
+                        <li><strong>Tipo de transacción:</strong> {{ data.transaction.transactionType }}</li>
+                        <li><strong>Criptomoneda:</strong> {{ data.transaction.cryptocurrency }}</li>
+                        <li><strong>Cantidad:</strong> {{ data.transaction.quantity | number:'1.8-8' }}</li>
+                        <li><strong>Precio por unidad (USD):</strong> {{ data.transaction.pricePerUnitUSD | currency:'USD' }}</li>
+                        <li><strong>Total (USD):</strong> {{ data.transaction.totalAmountUSD | currency:'USD' }}</li>
+                        </ul>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <div class="row">
+                        <button class="btn btn-primary custom-btn col" (click)="onCancel()">Cancelar</button>
+                        <button class="btn btn-primary custom-btn col" (click)="onConfirm()">Confirmar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

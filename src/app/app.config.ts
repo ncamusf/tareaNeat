@@ -6,6 +6,7 @@ import { getFirestore, provideFirestore } from '@angular/fire/firestore';
 import { environment } from '../environments/environment.development';
 import { FIREBASE_OPTIONS } from '@angular/fire/compat';
 import { getDatabase, provideDatabase } from '@angular/fire/database';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -13,5 +14,5 @@ export const appConfig: ApplicationConfig = {
     {provide: FIREBASE_OPTIONS, useValue: environment.firebase},
     provideAuth(() => getAuth()),
     provideFirestore(() => getFirestore()),
-    provideDatabase(() => getDatabase())],
+    provideDatabase(() => getDatabase()), provideAnimationsAsync(), provideAnimationsAsync()],
 };

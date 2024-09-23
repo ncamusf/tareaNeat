@@ -15,58 +15,45 @@ export class AuthService {
     private userService: UserService) {  }
 
 
-  login(email: string, password:string){
-    this.fireAuth.signInWithEmailAndPassword(email,password).then(()=> {
-        localStorage.setItem('token','true');
-        this.fireAuth.onAuthStateChanged((user) => {
-          if (user) {
-            // User logged in already or has just logged in.
-            localStorage.setItem('idUser',user.uid);
-          } else {
-            // User not logged in or has just logged out.
-          }
-        });
-        
-        this.router.navigate(['crypto-neat-app']);
-
-      }, err => {
-        alert('Something went wrong');
-        this.router.navigate(['/login']);
-      }
-    )
-  }
-  isAuthenticated(): Promise<boolean> {
-    return new Promise((resolve, reject) => {
-      this.fireAuth.onAuthStateChanged(user => {
+    login(email: string, password: string) {
+      this.fireAuth.signInWithEmailAndPassword(email, password).then((userCredential) => {
+        const user = userCredential.user;
         if (user) {
-          if(localStorage.getItem('idUser') == user.uid){
-            resolve(true);
-          }
-          resolve(false);
+          this.router.navigate(['/home']);
         } else {
-          resolve(false);
+          console.error('No se pudo obtener el usuario después de iniciar sesión.');
         }
-      }, error => reject(error));
-    });
+      }).catch(err => {
+        alert('Algo salió mal');
+        console.error('Error en login:', err);
+        this.router.navigate(['/login']);
+      });
+    }
+  isAuthenticated(): Observable<boolean> {
+    return this.fireAuth.authState.pipe(
+      map(user => !!user) 
+    );
   }
 
-
-
-  register(email: string, password:string,
-    name: string, lastName: string){
-    this.fireAuth.createUserWithEmailAndPassword(email,password).then( () => {
-      alert('Registration Successful')
-      this.login(email,password);
-      this.userService.createUserInfo(name,lastName);
-    }, err => {
+  register(email: string, password: string, name: string, lastName: string) {
+    this.fireAuth.createUserWithEmailAndPassword(email, password).then((userCredential) => {
+      alert('Registro exitoso');
+      const user = userCredential.user;
+      if (user) {
+        this.userService.createUserInfo(user.uid, name, lastName);
+        this.router.navigate(['/home']);
+      } else {
+        console.error('No se pudo obtener el usuario después del registro.');
+      }
+    }).catch(err => {
       alert(err.message);
+      console.error('Error en register:', err);
       this.router.navigate(['/register']);
-    })
+    });
   }
 
   logout(){
     this.fireAuth.signOut().then( () => {
-      localStorage.removeItem('token');
       localStorage.removeItem('idUser')
       this.router.navigate(['/login']);
     }, err => {

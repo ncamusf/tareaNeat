@@ -1,0 +1,84 @@
+.abrir-modal {
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+}
+
+.animacion {
+    animation-duration: 2s;
+    animation-fill-mode: both;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-fill-mode: both;
+}
+
+.fadeIn {
+    animation-name: fadeIn;
+    -webkit-animation-name: fadeIn;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+/* Ajusta el formato de las tarjetas de criptomonedas */
+.crypto-card-format {
+    width: 170px;
+    height: 150px;
+    padding: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+    border-radius: 12px;
+    border: 2px solid #DBE9FC;
+    background: #FFF;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    flex-shrink: 0;
+}
+/* Logo de criptomonedas dentro de la tarjeta */
+.crypto-icon-tag {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Espacio entre el logo y el tag */
+}
+
+/* Estilo del nombre de la criptomoneda */
+.crypto-code {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #1E3A8A;
+}
+
+/* Estilo del nombre completo de la criptomoneda */
+.crypto-name {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #9D9FC2;
+    margin-bottom: 15px;
+}
+
+/* Estilo del precio de la criptomoneda */
+.crypto-price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #2E3B8A;
+}
