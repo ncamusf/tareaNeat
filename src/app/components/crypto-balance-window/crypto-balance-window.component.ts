@@ -71,4 +71,7 @@ export class CryptoBalanceWindowComponent implements OnInit {
   getFormattedTotalAmount(totalAmount: number): string {
     return totalAmount.toFixed(4);
   }
+  getTotalAmountBalance(){
+    return this.userInfo?.accountBalanceCrypto.reduce((acc, cryptoBalance)=> acc + this.getCurrencyBalanceInUSD(cryptoBalance), this.userInfo.accountBalanceUSD);
+  }
 }

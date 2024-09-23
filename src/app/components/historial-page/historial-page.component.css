@@ -14,11 +14,6 @@
   color: #303073;
 }
 
-.balance-resume-data {
-  /* Puedes agregar estilos comunes para los datos aquí */
-}
-
-/* Opcional: Añadir estilos alternativos para filas de datos */
 .balance-resume-entry:nth-child(even) {
   background: #f9f9f9;
 }
