@@ -1,28 +1,26 @@
 <div class="crypto-balance-space">
-<h2>Historial de Transacciones</h2>
+  <h2 class="subTitle">Historial de Transacciones</h2>
+  <hr class="my-2 mx-1 subTitle">
 
-<table>
-  <thead>
-    <tr>
-      <th>Fecha</th>
-      <th>Tipo de Transacción</th>
-      <th>Criptomoneda</th>
-      <th>Cantidad</th>
-      <th>Precio por Unidad (USD)</th>
-      <th>Monto Total (USD)</th>
-      <th>Estado</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let transaction of userInfo?.transactions">
-      <td>{{ getDate(transaction.date)}}</td>
-      <td>{{ transaction.transactionType }}</td>
-      <td>{{ transaction.cryptocurrency }}</td>
-      <td>{{ transaction.quantity }}</td>
-      <td>{{ transaction.pricePerUnitUSD | currency:'USD' }}</td>
-      <td>{{ transaction.totalAmountUSD | currency:'USD' }}</td>
-      <td>{{ transaction.transactionStatus }}</td>
-    </tr>
-  </tbody>
-</table>
+  <div class="my-2">
+    <div class="balance-resume-entry-title grid-container">
+      <span class="balance-resume-title">Fecha</span>
+      <span class="balance-resume-title">Tipo de Transacción</span>
+      <span class="balance-resume-title">Criptomoneda</span>
+      <span class="balance-resume-title">Cantidad</span>
+      <span class="balance-resume-title">Precio por Unidad (USD)</span>
+      <span class="balance-resume-title">Monto Total (USD)</span>
+      <span class="balance-resume-title">Estado</span>
+    </div>
+
+    <div *ngFor="let transaction of userInfo?.transactions" class="balance-resume-entry grid-container">
+      <span class="balance-resume-data">{{ getDate(transaction.date) }}</span>
+      <span class="balance-resume-data">{{ transaction.transactionType }}</span>
+      <span class="balance-resume-data">{{ transaction.cryptocurrency }}</span>
+      <span class="balance-resume-data">{{ transaction.quantity | number: '1.2-3'}}</span>
+      <span class="balance-resume-data">{{ transaction.pricePerUnitUSD | currency:'USD' }}</span>
+      <span class="balance-resume-data">{{ transaction.totalAmountUSD | currency:'USD' }}</span>
+      <span class="balance-resume-data">{{ transaction.transactionStatus }}</span>
+    </div>
+  </div>
 </div>

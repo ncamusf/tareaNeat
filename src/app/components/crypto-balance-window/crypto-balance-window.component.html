@@ -5,10 +5,10 @@
   <hr class="my-2 mx-1 subTitle">
   <div class="row mx-1">
     <div class="col subTitle">
-      <h5>Saldo USD: ${{userInfo?.accountBalanceUSD}}</h5>
+      <h5>Saldo USD: ${{ userInfo?.accountBalanceUSD | number: '1.2-2' }}</h5>
     </div>
     <div class="col subTitle">
-      <h5>Saldo total: ${{userInfo?.accountBalanceUSD}}</h5>
+      <h5>Saldo total: ${{ userInfo?.accountBalanceUSD | number: '1.2-2' }}</h5>
     </div>
   </div>
   <hr class="my-2 mx-1 subTitle">

@@ -1,14 +1,24 @@
-table {
-    width: 100%;
-    border-collapse: collapse;
-  }
-  
-  th, td {
-    border: 1px solid #ddd;
-    padding: 8px;
-  }
-  
-  th {
-    background-color: #f4f4f4;
-    text-align: left;
-  }
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1.5fr 1fr 2fr 2fr 1fr;
+  align-items: center;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(183, 211, 249, 0.50);
+  background: #FCFDFF;
+  margin-bottom: 15px;
+}
+
+.balance-resume-title {
+  font-weight: bold;
+  color: #303073;
+}
+
+.balance-resume-data {
+  /* Puedes agregar estilos comunes para los datos aquí */
+}
+
+/* Opcional: Añadir estilos alternativos para filas de datos */
+.balance-resume-entry:nth-child(even) {
+  background: #f9f9f9;
+}
