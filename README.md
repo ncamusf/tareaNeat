@@ -1,3 +1,5 @@
+## Aviso: No me gusto como quedo la WebApp en el tiempo estimado, hice una segunda branch en donde estoy continuando las cosas que me faltaron pulir.
+
 # CryptoNeat
 
 CryptoNeat es una aplicación web desarrollada con Angular que permite a los usuarios comprar y vender criptomonedas de manera segura y eficiente. Integrada con Firebase para la autenticación y almacenamiento de datos, CryptoNeat ofrece una experiencia de usuario fluida y actualizaciones en tiempo real de los precios de las criptomonedas.
