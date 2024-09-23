@@ -1,8 +1,18 @@
 
 <div *ngIf="userInfo?.accountBalanceUSD !== undefined">
   <h4 class="mx-2 subTitle">Tus Crypto Saldo</h4>
+  
   <hr class="my-2 mx-1 subTitle">
-  <div class="my-4">
+  <div class="row mx-1">
+    <div class="col subTitle">
+      <h5>Saldo USD: ${{userInfo?.accountBalanceUSD}}</h5>
+    </div>
+    <div class="col subTitle">
+      <h5>Saldo total: ${{userInfo?.accountBalanceUSD}}</h5>
+    </div>
+  </div>
+  <hr class="my-2 mx-1 subTitle">
+  <div class="my-2">
     <div class="mx-2 balance-resume-entry-title">
       <span class="balance-resume-title">Crypto</span>
       <span class="balance-resume-title">Monto</span>
@@ -12,14 +22,6 @@
       <span class="balance-resume-title">{{ accountBalanceCrypto.currencyName }}</span>
       <span class="balance-resume-quantity">{{accountBalanceCrypto.totalAmount.toFixed(4)}}</span>
       <span class="balance-resume-price">{{ getCurrencyBalanceInUSD(accountBalanceCrypto).toFixed(2) }} <span class="balance-resume-currency">USD</span></span>
-    </div>
-  </div>
-  <div class="row mx-1">
-    <div class="col subTitle">
-      <h5>Saldo USD: ${{userInfo?.accountBalanceUSD}}</h5>
-    </div>
-    <div class="col subTitle">
-      <h5>Saldo total: ${{userInfo?.accountBalanceUSD}}</h5>
     </div>
   </div>
 </div>
